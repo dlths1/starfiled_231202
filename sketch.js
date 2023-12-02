@@ -14,7 +14,7 @@ function setup() {
     stars[i] =  createVector(
       random(-width*factor, width*factor),
       random(-height*factor, height*factor),
-      random(10, 400));
+      random(width));
     stars[i].pz = stars[i].z;
     //stars[i] = {x, y, z, pz};
 
@@ -33,7 +33,7 @@ function draw() {
     let y = star.y/star.z;
     let px = star.x/star.pz;
     let py = star.y/star.pz;
-    let d = map(star.z, 0, 400, 10, 1);
+    let d = map(star.z, 0, width, 10, 1);
 
     fill(255, 200, 150);
   //translate(width/2, height/2);
@@ -50,7 +50,7 @@ function draw() {
       star.y = random(-height*factor, height*factor);
       star.z = width;
       star.pz =width;
-  }
+    }
     
   //star.z += 10;
   }
