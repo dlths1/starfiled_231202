@@ -5,8 +5,8 @@ let width, height;
 
 
 function setup() {
-  width = 400; 
-  height = 400;
+  width = windowWidth; 
+  height = windowHeight;
   createCanvas(width, height);
   speedSlider = createSlider(0, 20, 10, 1);
 
@@ -40,7 +40,7 @@ function draw() {
   //stroke(255,255,100);
  
     circle(x, y, d);
-    stroke(255,200,150);
+    noStroke();
     line(x, y, px, py);
     star.pz = star.z;
     star.z -= speedSlider.value();
